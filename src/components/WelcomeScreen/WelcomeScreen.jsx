@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 import Clouds from 'vanta/dist/vanta.clouds.min'
-import THREE from 'three'
+import * as THREE from "three"
 
 const WelcomeScreen = ({children}) => {
   const myRefDiv = useRef(null)
@@ -29,14 +29,14 @@ const WelcomeScreen = ({children}) => {
   
 
     return (
-        <div ref={myRefDiv}>
-            WELCOME 2
+        <div ref={myRefDiv} className="full">
+            {children}
         </div>
     )
 }
 
 WelcomeScreen.propTypes = {
-  //children: PropTypes.node,
+  children: PropTypes.node,
 }
 
 export default WelcomeScreen
